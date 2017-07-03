@@ -10,136 +10,23 @@
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/onsenui@2.4.2/css/onsen-css-components.css">
         <script src="https://unpkg.com/onsenui@2.4.2/js/onsenui.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="js/scripts.js"></script>
     </head>
     <body>
-        <ons-splitter>
-            <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
-                <ons-page>
-                    <ons-list>
-                        <ons-list-item onclick="fn.load('home.html')" tappable>
-                            Home
-                        </ons-list-item>
-                        <ons-list-item onclick="fn.load('settings.html')" tappable>
-                            Settings
-                        </ons-list-item>
-                        <ons-list-item onclick="fn.load('about.html')" tappable>
-                            About
-                        </ons-list-item>
-                    </ons-list>
-                </ons-page>
-            </ons-splitter-side>
-            <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
-        </ons-splitter>
-        <ons-template id="home.html">
-            <ons-page>
-                <ons-toolbar>
-                    <div class="left">
-                        <ons-toolbar-button onclick="fn.open()">
-                            <ons-icon icon="md-menu"></ons-icon>
-                        </ons-toolbar-button>
-                    </div>
-                    <div class="center">
-                        Main
-                    </div>
-                </ons-toolbar>
-                <ons-list>
-                    <ons-list-header>Default</ons-list-header>
-                    <ons-list-item>Item A</ons-list-item>
-                    <ons-list-item>Item B</ons-list-item>
-
-                    <ons-list-header>Tappable / Ripple</ons-list-header>
-                    <ons-list-item tappable>Tap me</ons-list-item>
-
-                    <ons-list-header>Chevron</ons-list-header>
-                    <ons-list-item modifier="chevron" tappable>Chevron</ons-list-item>
-
-                    <ons-list-header>Thumbnails and titles</ons-list-header>
-                    <ons-list-item>
-                      <div class="left">
-                        <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
-                      </div>
-                      <div class="center">
-                        <span class="list-item__title">Cutest kitty</span><span class="list-item__subtitle">On the Internet</span>
-                      </div>
-                    </ons-list-item>
-
-                    <ons-list-header>Icons</ons-list-header>
-                    <ons-list-item>
-                      <div class="left">
-                        <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
-                      </div>
-                      <div class="center">
-                        Icon
-                      </div>
-                    </ons-list-item>
-
-                    <ons-list-header>Switch</ons-list-header>
-                    <ons-list-item>
-                      <div class="center">
-                        Turn it on
-                      </div>
-                      <div class="right">
-                        <ons-switch></ons-switch>
-                      </div>
-                    </ons-list-item>
-
-                    <ons-list-header>Switch and icon</ons-list-header>
-                    <ons-list-item>
-                      <div class="left">
-                        <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
-                      </div>
-                      <div class="center">
-                        Icon and switch
-                      </div>
-                      <div class="right">
-                        <ons-switch></ons-switch>
-                      </div>
-                    </ons-list-item>
-
-                    <ons-list-header>No divider</ons-list-header>
-                    <ons-list-item modifier="nodivider">Item A</ons-list-item>
-                    <ons-list-item modifier="nodivider">Item B</ons-list-item>
-
-                    <ons-list-header>Long divider</ons-list-header>
-                    <ons-list-item modifier="longdivider">Item A</ons-list-item>
-                    <ons-list-item modifier="longdivider">Item B</ons-list-item>
-                </ons-list>
-            </ons-page>
-        </ons-template>
-        <ons-template id="settings.html">
-            <ons-page>
-                <ons-toolbar>
-                    <div class="left">
-                        <ons-toolbar-button onclick="fn.open()">
-                            <ons-icon icon="md-menu"></ons-icon>
-                        </ons-toolbar-button>
-                    </div>
-                    <div class="center">
-                        Settings
-                    </div>
-                </ons-toolbar>
-                <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-                    Swipe right to open the menu!
-                </p>
-            </ons-page>
-        </ons-template>
-        <ons-template id="about.html">
-            <ons-page>
-                <ons-toolbar>
-                    <div class="left">
-                        <ons-toolbar-button onclick="fn.open()">
-                            <ons-icon icon="md-menu"></ons-icon>
-                        </ons-toolbar-button>
-                    </div>
-                    <div class="center">
-                        About
-                    </div>
-                </ons-toolbar>
-                <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-                    Swipe right to open the menu!
-                </p>
-            </ons-page>
-        </ons-template>
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Modal</div>
+            </ons-toolbar>
+            <p style="text-align: center">
+            <ons-button onclick="showModal()">Show modal</ons-button>
+            </p>
+        </ons-page>
+        
+        <ons-modal direction="up"  onclick="hide()">
+            <div style="text-align: center">
+                Hello
+            </div>
+        </ons-modal>
     </body>
 </html>

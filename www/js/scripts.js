@@ -1,13 +1,11 @@
-window.fn = {};
-window.fn.open = function()
+function showModal()
 {
-    document.getElementById('menu').open();
-};
+    var modal = document.querySelector('ons-modal');
+    modal.show();
+}
 
-window.fn.load = function(page)
+function hide()
 {
-    var content = document.getElementById('content');
-    var menu = document.getElementById('menu');
-    content.load(page)
-        .then(menu.close.bind(menu));
-};
+    var modal = document.querySelector('ons-modal');
+    modal.hide();
+}
