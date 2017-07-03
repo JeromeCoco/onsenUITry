@@ -6,12 +6,12 @@ function setup()
 function draw()
 {
 	if (mouseIsPressed) {
-    	fill(255);
+    	return 0;
   	} else {
     	fill(0);
   	}
   	noStroke();
-	ellipse(mouseX, mouseY, 10, 10);
+	ellipse(mouseX, mouseY, 20, 20);
 }
 
 function windowResized()
